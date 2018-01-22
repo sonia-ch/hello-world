@@ -57,7 +57,7 @@ d3.csv("ivis2.csv", function(error, data) {
         .domain(d3.extent(data, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
-  y.range([0,10]);
+  y.range([0,10]); //
   
   // Add grey background lines for context.
   background = svg.append("g")
