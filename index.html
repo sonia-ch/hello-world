@@ -57,6 +57,7 @@ d3.csv("visgra2.csv", function(error, data) {
         .domain(d3.extent(data, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
+  
   // Add grey background lines for context.
   background = svg.append("g")
       .attr("class", "background")
