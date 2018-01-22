@@ -36,8 +36,8 @@ svg {
 var margin = {top: 30, right: 20, bottom: 10, left: 20},
     width = screen.width - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
-var x = d3.scale.ordinal().rangePoints([0, width], 1),
-    y = d3.scaleLinear().rangePoints([height, 0]),
+var x = d3.scaleOrdinal().range([0, width], 1),
+    y = d3.scaleLinear().range([height, 0]),
     dragging = {};
 var line = d3.svg.line(),
     axis = d3.svg.axis().orient("left"),
