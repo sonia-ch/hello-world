@@ -38,6 +38,7 @@ var margin = {top: 30, right: 20, bottom: 10, left: 20},
     height = 500 - margin.top - margin.bottom;
 var x = d3.scaleOrdinal().range([0, width], 1),
     //y = d3.scaleLinear().range([height, 0]),
+    y = {},
     dragging = {};
 var line = d3.line(),
     axis = d3.axisLeft(),
