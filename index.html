@@ -30,18 +30,17 @@ svg {
 }
 </style>
 <body>
-<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
   
 <script>
 var margin = {top: 30, right: 20, bottom: 10, left: 20},
     width = screen.width - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
-var x = d3.scaleOrdinal().range([0, width], 1),
-    //y = d3.scaleLinear().range([height, 0]),
-    y = {},
+var x = d3.scale.ordinal().rangePoints([0, width], 1),
+    y = d3.scale.linear().rangePoints([height, 0]),
     dragging = {};
-var line = d3.line(),
-    axis = d3.axisLeft(),
+var line = d3.svg.line(),
+    axis = d3.svg.axis().orient("left"),
     background,
     foreground;
 var svg = d3.select("body").append("svg")
@@ -54,11 +53,11 @@ d3.csv("ivis2.csv", function(error, data) {
   // Extract the list of dimensions and create a scale for each.
   x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
     return d != "name" && d != "startYear" && d != "endYear" && d != "major" && d != "degree" 
-        && d != "Alias" && d != "hobbies" && d != "learn" && d != "Timestamp" && (y[d] = d3.scaleLinear()
+        && d != "Alias" && d != "hobbies" && d != "learn" && d != "Timestamp" && (y[d] = d3.scale.linear()
         .domain(d3.extent(data, function(p) { return +p[d]; }))
         .range([height, 0]));
   }));
-  //y.domain([0,10]);
+  y.domain([0,10]);
   
   // Add grey background lines for context.
   background = svg.append("g")
