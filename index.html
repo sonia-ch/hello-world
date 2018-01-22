@@ -131,7 +131,10 @@ function transition(g) {
 }
 // Returns the path for a given data point.
 function path(d) {
-  return line(dimensions.map(function(p) { console.log([position(p), y[p](d[p])]); return [position(p), y[p](d[p])]; }));
+  return line(dimensions.map(function(p) { 
+  console.log([position(p), y[p](d[p])]);
+  console.log([p, d[p], y[p](d[p])]);
+  return [position(p), y[p](d[p])]; }));
 }
 function brushstart() {
   d3.event.sourceEvent.stopPropagation();
