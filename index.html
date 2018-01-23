@@ -240,7 +240,13 @@ function ternaryPlot(selector, userOpt ) {
 				}
 				return i;
 			} );
-
+			
+		circles.on("click",function(){
+			d3.select(this).attr({
+				fill: "orange"
+            });
+		});
+		
 		circles.enter().append("circle");
 
 		circles.transition().attr("cx", function (d) { return d[0]; })
