@@ -36,7 +36,7 @@ var pie = d3.layout.pie()
 d3.csv("freq.csv", function(error, data) {
   if (error) throw error;
 
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "skill"; }));
+  color.domain(["Under 3","Between 4 and 6","Between 7 and 9","10"]);//d3.keys(data[0]).filter(function(key) { return key !== "skill"; }));
 
   data.forEach(function(d) {
     d.grading = color.domain().map(function(skill) {
