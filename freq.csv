@@ -1,13 +1,13 @@
 skill,Under 3,Between 4 and 6,Between 7 and 9,10
 Information Visualization,32,38,12,0
-statistical,21,47,15,0
-mathematics,5,55,23,0
-drawing/artistic,16,35,24,3
-computer usage,0,18,44,6
-programming,16,38,25,2
-computer graphics,programming,51,26,4,1
-hci programming,27,37,19,0
-user experience evaluation,15,28,33,2
-communication,1,11,43,17
-collaboration,1,11,43,11
-code repository,16,30,27,8
+Statistics,21,47,15,0
+Mathematics,5,55,23,0
+Drawing/artistic,16,35,24,3
+Computer usage,0,18,44,6
+Programming,16,38,25,2
+Computer graphics,51,26,4,1
+HCI programming,27,37,19,0
+UX evaluation,15,28,33,2
+Communication,1,11,43,17
+Collaboration,1,11,43,11
+Code repository,16,30,27,8
