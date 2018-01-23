@@ -297,7 +297,7 @@ function next(){
 		})
 	}*/
 	d3.csv("ivis2.csv", function(error, data) {
-		tp.data(data, function(d){ console.log([d.Statistics, d.Programming, d.Mathematics]); return [d.Statistics, d.Programming, d.Mathematics]}, 'name');
+		tp.data(data, function(d){ console.log([d.Statistics, d.Programming, d.Mathematics]); return [d.Statistics, d.Programming, d.Mathematics]}, 'Alias');
 	});
 }
 next();
