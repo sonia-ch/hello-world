@@ -298,7 +298,7 @@ function next(){
 	}
 	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
 	d3.csv("ivis2.csv", function(error, data) {
-		tp.data(data, function(d){ console.log([d.Statistics, d.Programming, d.Mathematics]); return [+d.Statistics, +d.Programming, +d.Mathematics]}, 'Alias');
+		tp.data(data, function(d){ console.log([+d.Statistics, +d.Programming, +d.Mathematics]); return [+d.Statistics, +d.Programming, +d.Mathematics]}, 'Alias');
 	});
 }
 next();
