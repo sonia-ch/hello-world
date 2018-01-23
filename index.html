@@ -299,9 +299,9 @@ function next(){
 	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
 	d3.csv("ivis2.csv", function(error, data) {
 		tp.data(data, function(d){ 
-		var total = +d.Statistics +d.Programming +d.Mathematics;
-		console.log([+d.Statistics/total, +d.Programming/total, +d.Mathematics/total]); 
-		return [+d.Statistics/total, +d.Programming/total, +d.Mathematics/total]}, 'Alias');
+		var total = +d.Statistics +d.Programming +d.Artistic;
+		console.log([+d.Statistics/total, +d.Programming/total, +d.Artistic/total]); 
+		return [+d.Statistics/total, +d.Programming/total, +d.Artistic/total]}, 'Alias');
 	});
 }
 next();
