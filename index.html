@@ -242,9 +242,10 @@ function ternaryPlot(selector, userOpt ) {
 			} );
 			
 		circles.on("click",function(){
-			d3.select(this).attr({
+		console.log("click");
+			/*d3.select(this).attr({
 				fill: "orange"
-            });
+            });*/
 		});
 		
 		circles.enter().append("circle");
