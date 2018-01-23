@@ -241,12 +241,22 @@ function ternaryPlot(selector, userOpt ) {
 				return i;
 			} );
 			
-		
 		circles.enter().append("circle")
-			.on("mouseover",function(){
+			.on("mouseover",function(d,i){
 					console.log("click");
+					
 					d3.select(this).attr({
 						fill: "orange"
+					});
+					
+					// Specify where to put label of text
+					svg.append("text").attr({
+					   id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+						x: function() { return xScale(d.x) - 30; },
+						y: function() { return yScale(d.y) - 15; }
+					})
+					.text(function() {
+					  return [d.x, d.y];  // Value of the text
 					});
 				});
 
