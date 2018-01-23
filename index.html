@@ -239,15 +239,16 @@ function ternaryPlot(selector, userOpt ) {
 					return plot.dataset[i][bindBy];
 				}
 				return i;
-			} )
-			.on("mouseover",function(){
-				console.log("click");
-				d3.select(this).attr({
-					fill: "orange"
-				});
-			});
+			} );
+			
 		
 		circles.enter().append("circle");
+			.on("mouseover",function(){
+					console.log("click");
+					d3.select(this).attr({
+						fill: "orange"
+					});
+				});
 
 		circles.transition().attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
