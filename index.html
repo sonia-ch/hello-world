@@ -297,7 +297,7 @@ function next(){
 		})
 	}*/
 	d3.csv("ivis2.csv", function(error, data) {
-		tp.data(data, function(d){ return [d.Statistics, d.Programming, d.Art]}, 'name');
+		tp.data(data, function(d){ return [d.Statistics, d.Programming, d.Mathematics]}, 'name');
 	});
 }
 next();
