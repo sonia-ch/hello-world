@@ -240,11 +240,11 @@ function ternaryPlot(selector, userOpt ) {
 				}
 				return i;
 			} )
-			.on("click",function(){
+			.on("mouseover",function(){
 				console.log("click");
-			/*d3.select(this).attr({
-				fill: "orange"
-            });*/
+				d3.select(this).attr({
+					fill: "orange"
+				});
 			});
 		
 		circles.enter().append("circle");
