@@ -239,14 +239,13 @@ function ternaryPlot(selector, userOpt ) {
 					return plot.dataset[i][bindBy];
 				}
 				return i;
-			} );
-			
-		circles.on("click",function(){
-		console.log("click");
+			} )
+			.on("click",function(){
+				console.log("click");
 			/*d3.select(this).attr({
 				fill: "orange"
             });*/
-		});
+			});
 		
 		circles.enter().append("circle");
 
