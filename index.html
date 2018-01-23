@@ -279,7 +279,9 @@ function ternaryPlot(selector, userOpt ) {
 				});*/
 				
 			.on("mouseover", function(d) {
-				console.log("click");			
+				console.log("click");
+				console.log(d);			
+				
 				div.transition()		
 					.duration(200)		
 					.style("opacity", .9);		
