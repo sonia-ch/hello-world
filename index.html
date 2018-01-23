@@ -135,10 +135,10 @@ function ternaryPlot(selector, userOpt ) {
 	var n = opt.axis_ticks.length;
 	if(opt.minor_axis_ticks){
 		opt.minor_axis_ticks.forEach(function(v) {	
-			var coord1 = coord( [v, 1, 10-v] );
-			var coord2 = coord( [v, 10-v, 1] );
-			var coord3 = coord( [1, 10-v, v] );
-			var coord4 = coord( [10-v, 1, v] );
+			var coord1 = coord( [v, 0, 10-v] );
+			var coord2 = coord( [v, 10-v, 0] );
+			var coord3 = coord( [0, 10-v, v] );
+			var coord4 = coord( [10-v, 0, v] );
 
 			axes.append("line")
 				.attr( lineAttributes(coord1, coord2) )
@@ -155,10 +155,10 @@ function ternaryPlot(selector, userOpt ) {
 	}
 
 	opt.axis_ticks.forEach(function(v) {	
-		var coord1 = coord( [v, 1, 10-v] );
-		var coord2 = coord( [v, 10-v, 1] );
-		var coord3 = coord( [1, 10-v, v] );
-		var coord4 = coord( [10-v, 1, v] );
+		var coord1 = coord( [v, 0, 10-v] );
+		var coord2 = coord( [v, 10-v, 0] );
+		var coord3 = coord( [0, 10-v, v] );
+		var coord4 = coord( [10-v, 0, v] );
 
 		axes.append("line")
 			.attr( lineAttributes(coord1, coord2) )
@@ -263,8 +263,8 @@ var plot_opts = {
 	side: 400,
 	margin: {top:70,left:150,bottom:150,right:150},
 	axis_labels:['Statistics','Programming','Art'],
-	axis_ticks:d3.range(1, 11, 3),
-	minor_axis_ticks:d3.range(1, 11, 1)
+	axis_ticks:d3.range(0, 11, 2),
+	minor_axis_ticks:d3.range(0, 11, 1)
 }
 
 var tp = ternaryPlot( '#plot', plot_opts );
