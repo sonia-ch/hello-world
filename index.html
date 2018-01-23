@@ -287,7 +287,7 @@ var tp = ternaryPlot( '#plot', plot_opts );
 	], function(d){ return [d.journalist, d.developer, d.designer]}, 'label');*/
 
 function next(){
-	/*var d = []
+	var d = []
 	for(var i = 0; i < 100; i++){
 		d.push({
 			journalist:Math.random(),
@@ -295,10 +295,11 @@ function next(){
 			designer:Math.random(),
 			label:'point'+i
 		})
-	}*/
-	d3.csv("ivis2.csv", function(error, data) {
+	}
+	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');
+	/*d3.csv("ivis2.csv", function(error, data) {
 		tp.data(data, function(d){ console.log([d.Statistics, d.Programming, d.Mathematics]); return [d.Statistics, d.Programming, d.Mathematics]}, 'Alias');
-	});
+	});*/
 }
 next();
 
