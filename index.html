@@ -253,7 +253,7 @@ function ternaryPlot(selector, userOpt ) {
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
 		plot.dataset = data;
 		
-		//svg.selectAll("circle")
+		svg.selectAll("circle").remove();
 
 		var circles = svg.selectAll("circle")
 			//.filter(function(d,i){return d.degree == "Bachelor in Science"})
