@@ -262,14 +262,14 @@ function ternaryPlot(selector, userOpt ) {
 			
 		circles.enter().append("circle")
 				
-			.on("mouseover", function(d) {
+			.on("onclick", function(d) {
 				console.log("click");
 				console.log(plot.dataset[3]);			
 				
 				div.transition()		
 					.duration(200)		
 					.style("opacity", .9);		
-				div	.html(plot.dataset[3] + "<br/>"  + "Funciona!")	
+				div	.html(plot.dataset[d][bindBy] + "<br/>"  + "Funciona!")	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
 				})					
