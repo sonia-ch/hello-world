@@ -273,10 +273,12 @@ function ternaryPlot(selector, userOpt ) {
 			
 		circles.enter().append("circle")
 			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
-				if(filterBy != "all"){
+				if(filterBy == "all"){
+					return true
+				}elseif(filterBy == "Bachelor in Science"){
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
-					return true}
+					return plot.dataset[i][filterBy] == "1"}
 			})
 				
 			.on("mouseover", function(d,i) {
@@ -299,10 +301,10 @@ function ternaryPlot(selector, userOpt ) {
 		circles.transition().filter(function(d,i){ 
 			if(filterBy == "all"){
 				return true
-			}elseif(filterBy == "Art"){
-				return plot.dataset[i][filterBy] == "1"
-			}else{
+			}elseif(filterBy == "Bachelor in Science"){
 				return plot.dataset[i]["degree"] == filterBy
+			}else{
+				return plot.dataset[i][filterBy] == "1"
 			}})
 			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
