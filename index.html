@@ -73,6 +73,12 @@
 </head>
 <a id="nextbutton" href="#">Data change</a>
 <a id="degreebutton" href="#">Only Bachelor students</a>
+<a id="sportsbutton" href="#">Only Bachelor students</a>
+<a id="artbutton" href="#">Only Bachelor students</a>
+<a id="gamesbutton" href="#">Only Bachelor students</a>
+<a id="programmingbutton" href="#">Only Bachelor students</a>
+
+
 
 <div id="plot">
 
@@ -291,12 +297,13 @@ function ternaryPlot(selector, userOpt ) {
 			});
 
 		circles.transition().filter(function(d,i){ 
-			if(filterBy != "all"){
-				console.log(filterBy);
-				return plot.dataset[i]["degree"] == filterBy
+			if(filterBy == "all"){
+				return true
+			}elseif(filterBy == "Art"){
+				return plot.dataset[i][filterBy] == "1"
 			}else{
-				return true}
-			})
+				return plot.dataset[i]["degree"] == filterBy
+			}})
 			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
 			.attr("r", 6);
@@ -355,7 +362,7 @@ function next(){
 		})
 	}
 	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
-	d3.csv("ivis2.csv", function(error, data) {
+	d3.csv("ivis3.csv", function(error, data) {
 		data.forEach(function(d) {
 			d.Alias = d.Alias;
 			//console.log(d.Alias);
@@ -368,14 +375,14 @@ function next(){
 	});
 }
 
-function updateData(){
-	d3.csv("ivis2.csv", function(error, data) {
+function updateData(filterBy){
+	d3.csv("ivis3.csv", function(error, data) {
 		
 		tp.data(data, function(d){ 
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
 			//console.log([+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]); 
 			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]
-		}, "Alias", "Bachelor in Science");
+		}, "Alias", filterBy);
 	});
 }
 next();
@@ -384,8 +391,10 @@ d3.select('#nextbutton').on('click', function(e){
 	next(); d3.event.preventDefault(); });
 
 d3.select('#degreebutton').on('click', function(e){
-	updateData(); d3.event.preventDefault(); });
-
+	updateData("Bachelor in Science"); d3.event.preventDefault(); });
+	
+d3.select('#artbutton').on('click', function(e){
+	updateData("Art"); d3.event.preventDefault(); });
 </script>
 
 </body>
