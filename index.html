@@ -272,7 +272,7 @@ function ternaryPlot(selector, userOpt ) {
 			} );
 			
 		circles.enter().append("circle")
-			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
+			.filter(function(d,i){ //console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy == "all"){
 					return true
 				}elseif(filterBy == "Bachelor in Science"){
@@ -329,7 +329,7 @@ function ternaryPlot(selector, userOpt ) {
 var plot_opts = {
 	side: 400,
 	margin: {top:70,left:150,bottom:150,right:150},
-	axis_labels:['Statistics','Programming','Art'],
+	axis_labels:['Statistics','Programming','Creativity'],
 	axis_ticks:d3.range(0, 11, 2),
 	minor_axis_ticks:d3.range(0, 11, 1)
 }
@@ -353,7 +353,7 @@ var tp = ternaryPlot( '#plot', plot_opts );
 		{journalist:20,developer:10,designer:70,label:'point 11'},
 	], function(d){ return [d.journalist, d.developer, d.designer]}, 'label');*/
 
-function next(){
+function showAll(){
 	/*var d = []
 	for(var i = 0; i < 10; i++){
 		d.push({
@@ -387,16 +387,19 @@ function updateData(filterBy){
 		}, "Alias", filterBy);
 	});
 }
-next();
+showAll();
 
 d3.select('#nextbutton').on('click', function(e){
-	next(); d3.event.preventDefault(); });
+	showAll(); d3.event.preventDefault(); });
 
 d3.select('#degreebutton').on('click', function(e){
 	updateData("Bachelor in Science"); d3.event.preventDefault(); });
 	
 d3.select('#artbutton').on('click', function(e){
 	updateData("Art"); d3.event.preventDefault(); });
+	
+d3.select('#sportsbutton').on('click', function(e){
+	updateData("Sports"); d3.event.preventDefault(); });
 </script>
 
 </body>
