@@ -363,7 +363,9 @@ function next(){
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
 			//console.log([+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]); 
 			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]
-		}, "Alias");
+		}, function(d){
+			return d.Alias
+		});
 	});
 }
 next();
