@@ -261,23 +261,6 @@ function ternaryPlot(selector, userOpt ) {
 			} );
 			
 		circles.enter().append("circle")
-			/*.on("mouseover",function(d,i){
-					console.log("click");
-					
-					d3.select(this).attr({
-						fill: "black"
-					});
-					
-					// Specify where to put label of text
-					svg.append("text").attr({
-					   id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
-						x: function() { return i - 30; },
-						y: function() { return i - 15; }
-					})
-					.text(function() {
-					  return [d.x, d.y];  // Value of the text
-					});
-				});*/
 				
 			.on("mouseover", function(d) {
 				console.log("click");
@@ -286,7 +269,7 @@ function ternaryPlot(selector, userOpt ) {
 				div.transition()		
 					.duration(200)		
 					.style("opacity", .9);		
-				div	.html(plot.dataset[i][bindBy] + "<br/>"  + "Funciona!")	
+				div	.html(plot.dataset[3] + "<br/>"  + "Funciona!")	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
 				})					
@@ -362,7 +345,7 @@ function next(){
 		tp.data(data, function(d){ 
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
 			//console.log([+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]); 
-			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]
+			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total, d.Alias]
 		}, "Alias");
 	});
 }
