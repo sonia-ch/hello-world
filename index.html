@@ -254,6 +254,7 @@ function ternaryPlot(selector, userOpt ) {
 		var circles = svg.selectAll("circle")
 			.data( data.map( function(d){ return coord(accessor(d)); }), function(d,i){
 				if(bindBy){
+					console.log(plot.dataset[i][bindBy]);
 					return plot.dataset[i][bindBy];
 				}
 				return i;
