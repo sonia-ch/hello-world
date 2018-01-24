@@ -290,6 +290,7 @@ function ternaryPlot(selector, userOpt ) {
 
 		circles.transition().filter(function(d,i){ 
 			if(filterBy != "all"){
+				console.log(filterBy));
 				return plot.dataset[i]["degree"] == filterBy
 			}else{
 				return true}
