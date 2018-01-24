@@ -265,7 +265,6 @@ function ternaryPlot(selector, userOpt ) {
 			
 		circles.enter().append("circle")
 			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"])
-			console.log("d.degree: "+ d.degree);
 			return plot.dataset[i]["degree"] == "Bachelor in Science"})
 				
 			.on("mouseover", function(d,i) {
@@ -285,7 +284,8 @@ function ternaryPlot(selector, userOpt ) {
 					.style("opacity", 0);	
 			});
 
-		circles.transition().attr("cx", function (d) { return d[0]; })
+		circles.transition().filter(function(d,i){ eturn plot.dataset[i]["degree"] == "Bachelor in Science"})
+			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
 			.attr("r", 6);
 			
