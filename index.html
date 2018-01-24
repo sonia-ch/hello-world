@@ -253,7 +253,7 @@ function ternaryPlot(selector, userOpt ) {
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
 		plot.dataset = data;
 		
-		svg.selectAll("circle").exit().remove();
+		//svg.selectAll("circle")
 
 		var circles = svg.selectAll("circle")
 			//.filter(function(d,i){return d.degree == "Bachelor in Science"})
@@ -263,7 +263,8 @@ function ternaryPlot(selector, userOpt ) {
 					return plot.dataset[i][bindBy];
 				}
 				return i;
-			} );
+			} )
+			.exit().remove();;
 			
 		circles.enter().append("circle")
 			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
