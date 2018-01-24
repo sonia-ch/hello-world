@@ -276,7 +276,7 @@ function ternaryPlot(selector, userOpt ) {
 				if(filterBy == "all"){
 					return true
 				}else if(filterBy == "Bachelor in Science"){
-					console.log(plot.dataset[i]["degree"])
+					console.log(plot.dataset[i]["degree"]==filterBy)
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
 					return plot.dataset[i][filterBy] == "1"}
