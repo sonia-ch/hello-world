@@ -68,6 +68,13 @@
 			border-radius: 8px;			
 			pointer-events: none;			
 		}
+		
+		div.groups {
+			float: right;
+			max-width: 250px;
+			margin: 0;
+			padding: 1em;
+		}
 	</style>
 
 </head>
@@ -125,7 +132,8 @@ function ternaryPlot(selector, userOpt ) {
 		.style("opacity", 0);
 		
 	var svg2 = d3.select('#groups').append('svg')
-		.attr("width", 300)
+		.attr("class", "groups")				
+		//.attr("width", 300)
         .attr("height", 600);
 
     var w = opt.side;
