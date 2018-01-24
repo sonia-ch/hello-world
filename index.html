@@ -73,7 +73,7 @@
 			position: absolute;	
 			top: 50px;
 			left:700px;
-			max-width: 250px;
+			max-width: 550px;
 			margin: 0;
 			padding: 1em;
 			background: lightsteelblue;
@@ -374,7 +374,7 @@ function showAll(){
 		})
 	}
 	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
-	d3.csv("ivis3.csv", function(error, data) {
+	d3.csv("data.csv", function(error, data) {
 		data.forEach(function(d) {
 			d.Alias = d.Alias;
 			//console.log(d.Alias);
@@ -388,7 +388,7 @@ function showAll(){
 }
 
 function updateData(filterBy){
-	d3.csv("ivis3.csv", function(error, data) {
+	d3.csv("data.csv", function(error, data) {
 		
 		tp.data(data, function(d){ 
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
@@ -406,10 +406,16 @@ d3.select('#degreebutton').on('click', function(e){
 	updateData("Bachelor in Science"); d3.event.preventDefault(); });
 	
 d3.select('#artbutton').on('click', function(e){
-	updateData("Art"); d3.event.preventDefault(); });
+	updateData("art"); d3.event.preventDefault(); });
 	
 d3.select('#sportsbutton').on('click', function(e){
-	updateData("Sports"); d3.event.preventDefault(); });
+	updateData("sports"); d3.event.preventDefault(); });
+	
+d3.select('#programmingbutton').on('click', function(e){
+	updateData("programming"); d3.event.preventDefault(); });
+	
+d3.select('#gamesbutton').on('click', function(e){
+	updateData("games"); d3.event.preventDefault(); });
 </script>
 
 </body>
