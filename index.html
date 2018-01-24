@@ -258,6 +258,7 @@ function ternaryPlot(selector, userOpt ) {
 
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
 		plot.dataset = data;
+		var index = [];
 		
 		svg.selectAll("circle").remove();
 
@@ -276,9 +277,14 @@ function ternaryPlot(selector, userOpt ) {
 				if(filterBy == "all"){
 					return true
 				}else if(filterBy == "Bachelor in Science"){
-					console.log(plot.dataset[i]["degree"]==filterBy)
+					if(plot.dataset[i]["degree"] == filterBy){
+						index.append(i);}
+					console.log(index);
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
+					if(plot.dataset[i][filterBy] == "1"){
+						index.append(i);}
+					console.log(index);
 					return plot.dataset[i][filterBy] == "1"}
 			})
 				
@@ -288,8 +294,8 @@ function ternaryPlot(selector, userOpt ) {
 				
 				div.transition()		
 					.duration(200)		
-					.style("opacity", .9);		
-				div	.html(plot.dataset[i][bindBy] + "<br/>"  + "Hobbies: " + plot.dataset[i]["hobbies"])	
+					.style("opacity", .9);	
+				div	.html(plot.dataset[index[i]][bindBy] + "<br/>"  + "Hobbies: " + plot.dataset[index[i]]["hobbies"])	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
 			})				
