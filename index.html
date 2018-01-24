@@ -131,9 +131,9 @@ function ternaryPlot(selector, userOpt ) {
 		.attr("class", "tooltip")				
 		.style("opacity", 0);
 		
-	var svg2 = d3.select('#groups').append('svg')
+	var div2 = d3.select('#groups').append('div')
 		.attr("class", "groups")				
-		//.attr("width", 300)
+		.attr("width", 300)
         .attr("height", 600);
 
     var w = opt.side;
