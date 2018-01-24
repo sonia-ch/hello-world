@@ -275,7 +275,7 @@ function ternaryPlot(selector, userOpt ) {
 			.filter(function(d,i){ //console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy == "all"){
 					return true
-				}elseif(filterBy == "Bachelor in Science"){
+				}else if(filterBy == "Bachelor in Science"){
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
 					return plot.dataset[i][filterBy] == "1"}
@@ -301,7 +301,7 @@ function ternaryPlot(selector, userOpt ) {
 		circles.transition().filter(function(d,i){ 
 			if(filterBy == "all"){
 				return true
-			}elseif(filterBy == "Bachelor in Science"){
+			}else if(filterBy == "Bachelor in Science"){
 				return plot.dataset[i]["degree"] == filterBy
 			}else{
 				return plot.dataset[i][filterBy] == "1"
@@ -335,23 +335,6 @@ var plot_opts = {
 }
 
 var tp = ternaryPlot( '#plot', plot_opts );
-
-/*.data([
-		{journalist:75,developer:25,designer:0,label:'point 1'},
-		{journalist:70,developer:10,designer:20,label:'point 2'},
-		{journalist:75,developer:20,designer:5,label:'point 3'},
-
-
-		{journalist:5,developer:60,designer:35,label:'point 4'},
-		{journalist:10,developer:80,designer:10,label:'point 5'},
-		{journalist:10,developer:90,designer:0,label:'point 6'},
-		{journalist:20,developer:70,designer:10,label:'point 7'},
-
-		{journalist:10,developer:20,designer:70,label:'point 8'},
-		{journalist:15,developer:5,designer:80,label:'point 9'},
-		{journalist:10,developer:10,designer:80,label:'point 10'},
-		{journalist:20,developer:10,designer:70,label:'point 11'},
-	], function(d){ return [d.journalist, d.developer, d.designer]}, 'label');*/
 
 function showAll(){
 	/*var d = []
