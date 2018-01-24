@@ -278,12 +278,12 @@ function ternaryPlot(selector, userOpt ) {
 					return true
 				}else if(filterBy == "Bachelor in Science"){
 					if(plot.dataset[i]["degree"] == filterBy){
-						index.append(i);}
+						index.push(i);}
 					console.log(index);
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
 					if(plot.dataset[i][filterBy] == "1"){
-						index.append(i);}
+						index.push(i);}
 					console.log(index);
 					return plot.dataset[i][filterBy] == "1"}
 			})
