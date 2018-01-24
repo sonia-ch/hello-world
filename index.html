@@ -359,8 +359,8 @@ function updateData(){
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
 			//console.log([+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total].filter(function(d){return d.degree == "Bachelor in Science"})); 
 			console.log(data.filter(function(d){return d.degree == "Bachelor in Science"})); 
-
-			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total].filter(function(d){return d.degree == "Bachelor in Science"})
+			var dataFilter = data.filter(function(d){return d.degree == "Bachelor in Science"});
+			return [+dataFilter.UX_evaluation/total, +dataFilter.Programming/total, +dataFilter.Artistic/total]
 		}, "Alias");
 	});
 }
