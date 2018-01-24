@@ -264,8 +264,11 @@ function ternaryPlot(selector, userOpt ) {
 			} );
 			
 		circles.enter().append("circle")
-			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"])
-			return plot.dataset[i]["degree"] == filterBy})
+			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
+				if(filterBy != "all"){
+					return plot.dataset[i]["degree"] == filterBy
+				}else{
+					return true})
 				
 			.on("mouseover", function(d,i) {
 				console.log("mouse over");
@@ -284,7 +287,11 @@ function ternaryPlot(selector, userOpt ) {
 					.style("opacity", 0);	
 			});
 
-		circles.transition().filter(function(d,i){ return plot.dataset[i]["degree"] == filterBy})
+		circles.transition().filter(function(d,i){ 
+			if(filterBy != "all"){
+				return plot.dataset[i]["degree"] == filterBy
+			}else{
+				return true})
 			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
 			.attr("r", 6);
