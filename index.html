@@ -254,11 +254,11 @@ function ternaryPlot(selector, userOpt ) {
 		plot.dataset = data;
 
 		var circles = svg.selectAll("circle")
-			.filter(function(d,i){return d.degree == "Bachelor in Science"})
+			//.filter(function(d,i){return d.degree == "Bachelor in Science"})
 			.data( data.map( function(d){ return coord(accessor(d)); }), function(d,i){
 				if(bindBy){
 					//console.log(plot.dataset[i][bindBy]);
-					//return plot.dataset[i][bindBy];
+					return plot.dataset[i][bindBy];
 				}
 				return i;
 			} );
@@ -282,7 +282,8 @@ function ternaryPlot(selector, userOpt ) {
 					.style("opacity", 0);	
 			});
 
-		circles.transition().attr("cx", function (d) { return d[0]; })
+		circles.transition().filter(function(d,i){return d.degree == "Bachelor in Science"})
+			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
 			.attr("r", 6);
 			
