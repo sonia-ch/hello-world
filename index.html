@@ -84,6 +84,11 @@
 
 </div>
 
+<div id="groups">
+
+</div>
+
+
 <script charset="UTF-8" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.1.6/d3.min.js"></script>
 
 <script>
@@ -118,6 +123,10 @@ function ternaryPlot(selector, userOpt ) {
 	var div = d3.select("body").append("div")	
 		.attr("class", "tooltip")				
 		.style("opacity", 0);
+		
+	var svg2 = d3.select('#groups').append('svg')
+		.attr("width", 300)
+        .attr("height", 600);
 
     var w = opt.side;
     var h = Math.sqrt( opt.side*opt.side - (opt.side/2)*(opt.side/2));
@@ -298,11 +307,11 @@ function ternaryPlot(selector, userOpt ) {
 				div	.html(plot.dataset[index[i]][bindBy] + "<br/>"  + "Hobbies: " + plot.dataset[index[i]]["hobbies"])	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
-			})				
+			})	
 			.on("mouseout", function(d) {		
 				div.transition()		
 					.duration(500)		
-					.style("opacity", 0);	
+					.style("opacity", 0);
 			});
 
 		circles.transition().filter(function(d,i){ 
