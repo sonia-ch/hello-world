@@ -265,8 +265,6 @@ function ternaryPlot(selector, userOpt ) {
 				return i;
 			} );
 			
-		//circles.exit().remove();
-			
 		circles.enter().append("circle")
 			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy != "all"){
@@ -303,8 +301,6 @@ function ternaryPlot(selector, userOpt ) {
 			.attr("cy", function (d) { return d[1]; })
 			.attr("r", 6);
 			
-		circles.exit().remove();
-
 		svg.on("click", function() {
 			console.log("click");
 		});
