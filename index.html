@@ -272,7 +272,7 @@ function ternaryPlot(selector, userOpt ) {
 				if(filterBy != "all"){
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
-					return true}
+					return false}
 			})
 				
 			.on("mouseover", function(d,i) {
@@ -297,7 +297,7 @@ function ternaryPlot(selector, userOpt ) {
 				console.log(filterBy);
 				return plot.dataset[i]["degree"] == filterBy
 			}else{
-				return true}
+				return false}
 			})
 			.attr("cx", function (d) { return d[0]; })
 			.attr("cy", function (d) { return d[1]; })
