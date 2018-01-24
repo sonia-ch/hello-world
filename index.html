@@ -286,7 +286,7 @@ function ternaryPlot(selector, userOpt ) {
 				div.transition()		
 					.duration(200)		
 					.style("opacity", .9);		
-				div	.html(d[0].Alias + "<br/>"  + "Funciona!")	
+				div	.html(plot.dataset[i][bindBy] + "<br/>"  + "Funciona!")	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
 				})					
@@ -363,9 +363,7 @@ function next(){
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
 			//console.log([+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]); 
 			return [+d.UX_evaluation/total, +d.Programming/total, +d.Artistic/total]
-		}, function(d){
-			return d.Alias
-		});
+		}, "Alias");
 	});
 }
 next();
