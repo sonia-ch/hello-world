@@ -258,7 +258,7 @@ function ternaryPlot(selector, userOpt ) {
 			.data( data.map( function(d){ return coord(accessor(d)); }), function(d,i){
 				if(bindBy){
 					//console.log(plot.dataset[i][bindBy]);
-					return plot.dataset[i][bindBy];
+					//return plot.dataset[i][bindBy];
 				}
 				return i;
 			} );
