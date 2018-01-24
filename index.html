@@ -59,8 +59,8 @@
 		div.tooltip {	
 			position: absolute;			
 			text-align: center;			
-			width: 60px;					
-			height: 28px;					
+			width: 200px;					
+			height: 100px;					
 			padding: 2px;				
 			font: 12px sans-serif;		
 			background: lightsteelblue;	
@@ -288,7 +288,7 @@ function ternaryPlot(selector, userOpt ) {
 				div.transition()		
 					.duration(200)		
 					.style("opacity", .9);		
-				div	.html(plot.dataset[i][bindBy] + "<br/>"  + "")	
+				div	.html(plot.dataset[i][bindBy] + "<br/>"  + "Hobbies: " + plot.dataset[i]["hobbies"])	
 					.style("left", "600px")	
 					.style("top", "200px");//(d3.event.pageX) + "px")	//(d3.event.pageY - 28) + "px");	
 			})				
