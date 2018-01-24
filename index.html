@@ -263,8 +263,9 @@ function ternaryPlot(selector, userOpt ) {
 					return plot.dataset[i][bindBy];
 				}
 				return i;
-			} )
-			.exit().remove();;
+			} );
+			
+		circles.exit().remove();
 			
 		circles.enter().append("circle")
 			.filter(function(d,i){ console.log("plot: "+ plot.dataset[i]["degree"]);
