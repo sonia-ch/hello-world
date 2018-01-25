@@ -374,7 +374,7 @@ function showAll(){
 		})
 	}
 	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
-	d3.csv("some_data.csv", function(error, data) {
+	d3.csv("datos2.csv", function(error, data) {
 		data.forEach(function(d) {
 			d.Alias = d.Alias;
 			//console.log(d.Alias);
@@ -388,7 +388,7 @@ function showAll(){
 }
 
 function updateData(filterBy){
-	d3.csv("some_data.csv", function(error, data) {
+	d3.csv("datos2.csv", function(error, data) {
 		
 		tp.data(data, function(d){ 
 			var total = +d.UX_evaluation +d.Programming +d.Artistic;
