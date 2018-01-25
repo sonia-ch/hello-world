@@ -340,6 +340,7 @@ function ternaryPlot(selector, userOpt ) {
 		circles.enter().append("circle")
 			.filter(function(d,i){ //console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy == "all"){
+					index.push(i);
 					return true
 				}else if(filterBy == "Bachelor in Science"){
 					if(plot.dataset[i]["degree"] == filterBy){
