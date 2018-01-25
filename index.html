@@ -164,7 +164,8 @@ function ternaryPlot(selector, userOpt ) {
 		.style("top", Math.floor(i/2)*100 + "px");
 		divgroup.append("text").text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg")
-		.attr('id', function(d){ return "group" + (i+1); });
+		.attr('id', function(d){ return "group" + (i+1); })
+		.on("click", function(d){ console.log("Selected group " + (i+1))});
 
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
@@ -331,8 +332,6 @@ function ternaryPlot(selector, userOpt ) {
 			d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 		}
-		//d3.select("#group1").selectAll("circle")
-		//divgroupSvg.selectAll("circle")
 	}
 	
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
