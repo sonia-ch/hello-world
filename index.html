@@ -159,9 +159,9 @@ function ternaryPlot(selector, userOpt ) {
 		div2.append("div")
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
-		.style("top", (Math.round(i/2)+1)*100 + "px")
+		.style("top", Math.floor(i/2)*100 + "px")
 	}
-	var div3 = d3.select('#subgroups1')
+	/*var div3 = d3.select('#subgroups1')
 		.attr("class", "subgroups")	
 		.style("left",0 + "px")
 		//.attr("width", 300)
@@ -169,7 +169,7 @@ function ternaryPlot(selector, userOpt ) {
 		
 	var div4 = d3.select('#subgroups2')
 		.attr("class", "subgroups")	
-		.style("left",200 + "px");
+		.style("left",200 + "px");*/
 
     var w = opt.side;
     var h = Math.sqrt( opt.side*opt.side - (opt.side/2)*(opt.side/2));
