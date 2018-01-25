@@ -80,6 +80,17 @@
 			padding: 1em;
 			background: lightsteelblue;
 		}
+		
+		div.subgroups {
+			position: absolute;	
+			top: 75px;
+			left:800px;
+			width: 180px;
+			height: 80px;
+			margin: 10px;
+			padding: 1em;
+			background: lightsteelblue;
+		}
 	</style>
 
 </head>
@@ -97,6 +108,8 @@
 </div>
 
 <div id="groups">
+	<div id="subgroups">
+	</div>
 
 </div>
 
@@ -138,8 +151,13 @@ function ternaryPlot(selector, userOpt ) {
 		
 	var div2 = d3.select('#groups').append('div')
 		.attr("class", "groups")				
-		.attr("width", 300)
-        .attr("height", 600);
+		//.attr("width", 300)
+        //.attr("height", 600);
+		
+	var div3 = d3.select('#subgroups').append('div')
+		.attr("class", "subgroups")				
+		//.attr("width", 300)
+        //.attr("height", 600);
 
     var w = opt.side;
     var h = Math.sqrt( opt.side*opt.side - (opt.side/2)*(opt.side/2));
