@@ -322,6 +322,13 @@ function ternaryPlot(selector, userOpt ) {
 	    return [p[0] * factor, p[1] * factor];
 	}
 
+	var teammates = 0;
+	
+	function updateGroup(){
+		divgroupSvg.selectAll("circle")
+		.style("fill","#DB7365");
+	}
+	
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
 		plot.dataset = data;
 		var index = [];
@@ -375,6 +382,8 @@ function ternaryPlot(selector, userOpt ) {
 			})
 			.on("click", function(d) {
 				console.log("on click!");
+				teammates += 1;
+				updateGroup(teammates);
 			});
 
 		circles.transition().filter(function(d,i){ 
