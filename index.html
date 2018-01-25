@@ -325,7 +325,7 @@ function ternaryPlot(selector, userOpt ) {
 		plot.dataset = data;
 		var index = [];
 		
-		//svg.selectAll("circle").remove();
+		svg.selectAll("circle").remove();
 
 		var circles = svg.selectAll("circle")
 			//.filter(function(d,i){return d.degree == "Bachelor in Science"})
@@ -338,7 +338,8 @@ function ternaryPlot(selector, userOpt ) {
 			} );
 			
 		circles.enter().append("circle")
-			.filter(function(d,i){ //console.log("plot: "+ plot.dataset[i]["degree"]);
+			.filter(function(d,i){ //
+				console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy == "all"){
 					index.push(i);
 					return true
