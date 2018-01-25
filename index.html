@@ -373,7 +373,9 @@ function ternaryPlot(selector, userOpt ) {
 					.duration(500)		
 					.style("opacity", 0);
 			});
-			.on("click",function(d){console.log("on click!")});
+			.on("click",function(d){
+				console.log("on click!");
+			});
 
 		circles.transition().filter(function(d,i){ 
 			console.log(i);
