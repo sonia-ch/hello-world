@@ -125,7 +125,7 @@ function ternaryPlot(selector, userOpt ) {
 		dataset:[]
 	};
 	
-	var teammates = 0;
+	var teammates = new array(10);
 
 	var opt = {
 		width:900,
@@ -167,6 +167,7 @@ function ternaryPlot(selector, userOpt ) {
 		divgroup.append("text").text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
+		.attr('teammates', 0)
 		.on("click", function(d){ 
 			console.log("Selected group ");
 			groupid = this.id;
@@ -338,6 +339,8 @@ function ternaryPlot(selector, userOpt ) {
 		for (t = 0; t < mates; t++){
 			console.log("Group id: " + groupid);
 			group.select("#circle" + (t+1) + groupid)
+			group.teammates+=1
+			console.log(group.teammates)
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 		}
@@ -396,7 +399,8 @@ function ternaryPlot(selector, userOpt ) {
 			})
 			.on("click", function(d) {
 				console.log("on click!");
-				teammates += 1;
+				//teammates[] += 1;
+				person=this
 				console.log("select a group now!");
 				//updateGroup(teammates);
 			});
