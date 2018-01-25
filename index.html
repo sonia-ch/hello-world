@@ -172,7 +172,7 @@ function ternaryPlot(selector, userOpt ) {
 			groupid = this.id;
 			console.log(groupid);
 			var index = groupid.substring(5);
-			teammates[index]+=1;
+			teammates[index-1]+=1;
 			updateGroup(d3.select(this),groupid,teammates[index]);
 		});
 
@@ -400,7 +400,8 @@ function ternaryPlot(selector, userOpt ) {
 			.on("click", function(d) {
 				console.log("on click!");
 				//teammates[] += 1;
-				person=this
+				var person=this.data;
+				console.log(person);
 				console.log("select a group now!");
 				//updateGroup(teammates);
 			});
