@@ -165,7 +165,7 @@ function ternaryPlot(selector, userOpt ) {
 		divgroup.append("text").text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
-		.on("click", function(d){ console.log("Selected group " + (i+1))});
+		.on("click", function(d){ console.log("Selected group " + d.id)});
 
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
