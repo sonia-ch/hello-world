@@ -165,7 +165,10 @@ function ternaryPlot(selector, userOpt ) {
 		divgroup.append("text").text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
-		.on("click", function(d){ console.log("Selected group " + d.id)});
+		.on("click", function(d){ 
+			console.log("Selected group ");
+			updateGroup(d3.select(this),teammates);
+		});
 
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
@@ -327,9 +330,10 @@ function ternaryPlot(selector, userOpt ) {
 
 	var teammates = 0;
 	
-	function updateGroup(mates){
+	function updateGroup(group, mates){
 		for (t = 0; t < mates; t++){
-			d3.select("#group1").select("#circle" + (t+1) + "group1")
+			group.select("#circle" + (t+1) + "group1");
+			//d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 		}
 	}
@@ -388,7 +392,8 @@ function ternaryPlot(selector, userOpt ) {
 			.on("click", function(d) {
 				console.log("on click!");
 				teammates += 1;
-				updateGroup(teammates);
+				console.log("select a group now!");
+				//updateGroup(teammates);
 			});
 
 		circles.transition().filter(function(d,i){ 
