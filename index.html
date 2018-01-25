@@ -382,8 +382,8 @@ function ternaryPlot(selector, userOpt ) {
 			}else{
 				return plot.dataset[i][filterBy] == "1"
 			}})
-			.attr("cx", function (d) { return d[0]; })
-			.attr("cy", function (d) { return d[1]; })
+			.attr("cx", function (d) { console.log("cx: " + d[0]); return d[0]; })
+			.attr("cy", function (d) { console.log("cy: " + d[0]); return d[1]; })
 			.attr("r", 6);
 			
 		svg.on("click", function() {
