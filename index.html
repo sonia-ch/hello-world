@@ -156,16 +156,18 @@ function ternaryPlot(selector, userOpt ) {
         //.attr("height", 600);
 		
 	var divgroup = [];
+	var divgroupSvg = [];
 	for (i = 0; i < 10; i++) {
 		divgroup = div2.append("div")
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
-		.style("top", Math.floor(i/2)*100 + "px")
-		.append("svg")
-		.append("text").text("Group " + (i+1))
+		.style("top", Math.floor(i/2)*100 + "px");
+		
+		divgroupSvg = divgroup.append("svg");
+		divgroup.append("text").text("Group " + (i+1))
 		
 		for (k = 0; k < 8; k++){
-			divgroup.append("circle")
+			divgroupSvg.append("circle")
 			.attr("cx", 10*k+30)
 			.attr("cy", 20)
 			.attr("r", 5);
