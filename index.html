@@ -127,6 +127,15 @@ function ternaryPlot(selector, userOpt ) {
 	
 	var teammates = [0,0,0,0,0,0,0,0,0,0];
 
+	var waitingperson = [];
+	var groupedpersons = [];
+	for (i=0;i<10;i++){
+		for(j=0;j<10;j++){
+			groupedpersons[i][j]="";
+		}
+	}
+	
+	
 	var opt = {
 		width:900,
 		height:900,
@@ -173,7 +182,7 @@ function ternaryPlot(selector, userOpt ) {
 			console.log(groupid);
 			var index = groupid.substring(5);
 			teammates[index-1]+=1;
-			updateGroup(d3.select(this),groupid,teammates[index-1]);
+			updateGroup(d3.select(this),groupid,teammates[index-1],index);
 		});
 
 		for (k = 0; k < 8; k++){
@@ -336,8 +345,10 @@ function ternaryPlot(selector, userOpt ) {
 
 	
 	
-	function updateGroup(group, groupid, mates){
-		for (t = 0; t < mates; t++){
+	function updateGroup(group, groupid, mates,index){
+		groupedpersons[index-1][mates-1] = waitingperson;
+		console.log(groupedpersons);
+		for (t = 0; t < mates; t++){			
 			console.log("Group id: " + groupid);
 			group.select("#circle" + (t+1) + groupid)
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
@@ -397,9 +408,10 @@ function ternaryPlot(selector, userOpt ) {
 					.duration(500)		
 					.style("opacity", 0);
 			})
-			.on("click", function(d) {
+			.on("click", function(d,i) {
 				console.log("on click!");
 				console.log("select a group now!");
+				waitingperson = plot.dataset[index[i]][bindBy];
 				//updateGroup(teammates);
 			});
 
