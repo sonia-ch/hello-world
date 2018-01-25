@@ -155,12 +155,23 @@ function ternaryPlot(selector, userOpt ) {
 		//.attr("width", 300)
         //.attr("height", 600);
 		
+	var divgroup = [];
 	for (i = 0; i < 10; i++) {
-		div2.append("div")
+		divgroup = div2.append("div")
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
 		.style("top", Math.floor(i/2)*100 + "px")
+		.append("svg")
 		.append("text").text("Group " + (i+1))
+		
+		for (k = 0; k < 8; k++){
+			divgroup.append("circle")
+			.attr("cx", 10*k+30)
+			.attr("cy", 20)
+			.attr("r", 5);
+		}
+		
+		
 	}
 	/*var div3 = d3.select('#subgroups1')
 		.attr("class", "subgroups")	
