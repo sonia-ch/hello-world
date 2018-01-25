@@ -162,13 +162,12 @@ function ternaryPlot(selector, userOpt ) {
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
 		.style("top", Math.floor(i/2)*100 + "px");
-		
-		divgroupSvg = divgroup.append("svg");
 		divgroup.append("text").text("Group " + (i+1))
+		divgroupSvg = divgroup.append("svg");
 		
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
-			.attr("cx", 10*k+30)
+			.attr("cx", 11*k+50)
 			.attr("cy", 20)
 			.attr("r", 5);
 		}
