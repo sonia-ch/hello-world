@@ -173,7 +173,7 @@ function ternaryPlot(selector, userOpt ) {
 			console.log(groupid);
 			var index = groupid.substring(5);
 			teammates[index-1]+=1;
-			updateGroup(d3.select(this),groupid,teammates[index]);
+			updateGroup(d3.select(this),groupid,teammates[index-1]);
 		});
 
 		for (k = 0; k < 8; k++){
