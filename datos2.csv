@@ -1,6 +1,6 @@
 Alias;degree;major;hobbies;sports;arts;games;programming;visualization;statistics;math;art;computer usage;programming;graphics;hci;user experience;communication;collaboration;code repository;
 Hannah Abbott ;Master in Science;Computer Science;Machine learning, crypto currencies, video games, programming in general;0;0;1;1;3;6;2;6;10;10;2;8;1;6;8;10;
-Ludo Bagman ;Master in Science;Human-Computer Interaction;"I am interested in music, art and media. I play piano; love skiing.";1;1;0;0;2;4;3;9;3;1;1;1;7;10;9;1;
+Ludo Bagman ;Master in Science;Human-Computer Interaction;"I am interested in music, art and media. I play piano, love skiing.";1;1;0;0;2;4;3;9;3;1;1;1;7;10;9;1;
 Bathilda Bagshot ;Bachelor in Science;Nuclear, Plasma, and Radiological Engineering (focus in microelectronics and nanotechnology);I enjoy learning about foreign cultures and languages, biking, tennis, classic movies, traveling, and organizing lots of different things (more of an OCD sort of thing, but very helpful). Recently I have been thinking a lot about the importance of design in engineering in general, be it a physical object like a cell phone or something more abstract like a computer algorithm. Smooth, effective design is satisfying, and fits well in a sleek, wired, progressive culture such as that of Sweden.;1;0;0;1;2;3;6;9;5;3;3;3;4;8;8;2;
 Katie Bell ;Bachelor in Science;Computer Science;Basketball;1;0;0;0;3;5;5;3;6;5;4;3;4;7;8;7;
 Cuthbert Binns;Master in Science;Media Technology;Music making, creative coding;0;1;0;1;2;1;3;7;8;6;2;6;5;9;9;2;
@@ -17,13 +17,13 @@ Alecto Carrow;Master in Science;Human-Computer Interaction;Design piques my inte
 Amycus Carrow;Master in Science;Media Technology;training, powerlifting, health, drawing, still photography, photoshop - digital art and retouch, dogs, horses;1;1;0;0;2;2;4;8;8;4;1;4;4;9;8;5;
 Reginald Cattermole;Master in Science;Media Technology;I like to play computer games and work out.;0;0;1;0;4;4;5;2;8;5;2;3;8;10;9;7;
 Mary Cattermole ;Master in Science;Media Technology;Computer games, movies, music, motorcycles, drawing, beer;0;0;1;0;5;2;4;8;9;8;4;5;5;10;9;10;
-Cho Chang ;Master in Science;Media Technology;I’m mainly a photography and video games nerd, but have an interest in everything media and tech basically. ;0;1;1;0;3;3;4;5;8;5;3;4;2;8;8;6;
+Cho Chang ;Master in Science;Media Technology;Iâ€™m mainly a photography and video games nerd, but have an interest in everything media and tech basically. ;0;1;1;0;3;3;4;5;8;5;3;4;2;8;8;6;
 Penelope Clearwater ;Master in Science;Human-Computer Interaction, Media Technology;Graphic design, photography, hanging at the gym:));0;1;0;0;3;4;4;7;8;3;1;4;9;10;8;1;
 Michael Corner;Master in Science;Human-Computer Interaction, Media Technology;I like playing video games, reading(mostly on the internet) and drink beers!;0;0;1;0;4;3;3;2;7;5;3;4;5;7;8;7;
 Vincent Crabbe;Master in Science;Computer Science;Game development, Japan;0;0;1;1;4;3;5;3;8;10;10;5;1;8;10;10;
 Colin Creevey;Master in Science;Human-Computer Interaction, Graphic Design;I am an aspiring UX/UI designer who loves reading and travelling;0;0;0;1;5;2;1;3;7;2;3;4;8;9;9;1;
 Fleur Delacour ;Master in Science;Media Technology;Games, drawing (amateur), reading. Interested in technology in all kinds.;0;1;1;0;3;4;7;7;9;6;3;2;7;8;8;5;
-Amos Diggory;Master in Science;Human-Computer Interaction, Media Technology;When I'm not studying I work at a climbing gym in stockholm (Klätterverket), where I also train ~3 times a week. So what interests me the most it, I would say climbing but I also do love Games (mostly console games) and it's an industry I would love to work in in the future. ;1;0;1;0;3;2;4;7;4;1;1;1;5;7;4;1;
+Amos Diggory;Master in Science;Human-Computer Interaction, Media Technology;When I'm not studying I work at a climbing gym in stockholm (KlÃ¤tterverket), where I also train ~3 times a week. So what interests me the most it, I would say climbing but I also do love Games (mostly console games) and it's an industry I would love to work in in the future. ;1;0;1;0;3;2;4;7;4;1;1;1;5;7;4;1;
 Albus Dumbledore;Master in Science;Haven't picked a major yet.;I'm mostly interested in games of different kinds. That's my hobby as well.;0;0;1;0;2;1;3;5;5;3;1;2;2;5;5;4;
 Seamus Finnigan;Master in Science;Media Technology;"Video production, photography
 
@@ -54,8 +54,8 @@ Neville Longbottom;Master in Science;Human-Computer Interaction;I like to play t
 Xenophilius Lovegood ;Master in Science;Media Technology;Programming, design and photography.;0;1;0;1;6;5;5;4;9;8;2;6;7;8;8;10;
 Remus Lupin;Master in Science;Human-Computer Interaction;Startups, self-improvement, sports;1;0;0;0;7;1;4;3;8;6;2;5;7;7;4;8;
 Draco Malfoy;Master in Science;Human-Computer Interaction, Industrial Engineering;Art, music, philosophy, fashion, movies, history, games. I like reading books.;0;1;0;0;3;3;5;4;10;5;2;4;8;8;9;1;
-Ernie Macmillan;Master in Science;Media Technology;"• Hobbies are playing football, traveling, watching tv, playing video game especially RTS or sandbox genre
-• Interest: Augmented Reality, Virtual Reality, Sustainable design, Renewable energy, Interactive Apps, Automatic system, IOT, blogging, comedy writing, startup, walking in new cities";1;0;1;1;4;5;5;4;7;4;4;5;6;3;6;3;
+Ernie Macmillan;Master in Science;Media Technology;"â€¢ Hobbies are playing football, traveling, watching tv, playing video game especially RTS or sandbox genre
+â€¢ Interest: Augmented Reality, Virtual Reality, Sustainable design, Renewable energy, Interactive Apps, Automatic system, IOT, blogging, comedy writing, startup, walking in new cities";1;0;1;1;4;5;5;4;7;4;4;5;6;3;6;3;
 Minerva McGonagall;Master in Science;Media Technology;i'm interested in music, i have been producing electronic music for about ten years. Other than that i'm into gaming. ;0;1;1;0;2;1;5;3;6;3;1;1;5;10;8;5;
 Cormac McLaggen;Master in Science;Media Technology;"I like history, development economics, video games and playing football. I also like traveling when my budget and time allows for it. 
 
@@ -79,9 +79,9 @@ Helena Ravenclaw;Master in Science;Human-Computer Interaction;Big fan of watchin
 Rowena Ravenclaw;Master in Art;Media Technology;I'm new to this field, I'll do my best to catch on :);0;0;0;0;1;1;4;6;4;1;1;1;7;7;7;3;
 Tom Marvolo Riddle;Master in Science;Computer Science;I enjoy drawing, 3D modelling and game development in my spare time. I also enjoy watching movies, playing video games and spending time with friends.;0;1;1;0;5;5;6;9;8;5;4;3;2;5;6;4;
 Demelza Robins ;Master in Science;Media Technology;"Interests:
-• Sustainability (Environment)
-• UX & HCI
-• Programming";0;0;0;1;3;5;6;8;9;7;2;7;8;8;8;6;
+â€¢ Sustainability (Environment)
+â€¢ UX & HCI
+â€¢ Programming";0;0;0;1;3;5;6;8;9;7;2;7;8;8;8;6;
 Augustus Rookwood;Master in Science;Media Technology;Comedy series, dogs and cooking;0;0;0;0;2;3;5;6;7;4;3;7;7;10;8;7;
 Thorfinn Rowle ;Master in Science;Computer Science, Media Technology;I've recently discovered an interest in UX, HCI, and computer security. In my free time I enjoy sailing and skiing.;1;0;0;1;2;2;3;6;7;7;1;3;5;10;10;6;
 Albert Runcorn;Master in Science;Computer Science;My academic interests are towards statistics and machine learning. My hobbies are music and outdoorsy stuff such as rock climbing and hiking. ;1;1;0;1;3;6;5;1;7;5;1;3;3;8;8;6;
@@ -91,7 +91,7 @@ Kingsley Shacklebolt;Master in Science;Computer Science;Music, film, games;0;1;1
 Stanley Shunpike;Master in Science;Media Technology;I have a big interest in languages (not programming languages hehe, spoken ones), food, culture, sustainability..;0;1;0;0;1;2;5;6;5;1;1;2;6;10;10;1;
 Aurora Sinistra;Master in Science;Computer Science;DataViz, Startups, Innovation, Art;0;1;0;0;9;6;7;8;10;7;5;7;6;3;2;9;
 Rita Skeeter ;Master in Science;Computer Science;I'm a master of computer science in interaction design track. I'm interested in pc games especially simulation games, sports especially basketball, history especially ancient times, and new technology in daily life.;0;0;1;0;1;6;5;1;10;6;1;5;5;7;8;6;
-Horace Slughorn;Master in Science;Media Technology;In my free time I often play multiplayer games with friends (or less frequently singelplayer games). Look at series and movies - both live action and animated. I did read a lot a few years ago, but can't really find the time nowadays. I'm also a music enthusiast and like the most genres. When I don't do anything of the above I look at streams à la Youtube or Twitch. ;0;1;1;0;2;2;4;5;7;3;2;3;6;7;6;5;
+Horace Slughorn;Master in Science;Media Technology;In my free time I often play multiplayer games with friends (or less frequently singelplayer games). Look at series and movies - both live action and animated. I did read a lot a few years ago, but can't really find the time nowadays. I'm also a music enthusiast and like the most genres. When I don't do anything of the above I look at streams Ã  la Youtube or Twitch. ;0;1;1;0;2;2;4;5;7;3;2;3;6;7;6;5;
 Salazar Slytherin;Master in Science;Human-Computer Interaction;Drawing, traveling, learning anything that I find interesting to learn and most of the time I am interested in too many things so I feel like I might need more than 24 hours in a day :s;0;0;0;0;2;3;7;10;8;5;1;3;10;8;8;5;
 Hepzibah Smith;Master in Science;Media Technology;Family, friends, traveling, music and training;1;1;0;0;3;3;5;3;9;5;5;8;8;10;9;5;
 Severus Snape;Master in Science;Computer Science;I enjoy traveling and especially skiing. I like nature and people.;1;0;0;0;3;4;5;3;8;5;1;2;4;8;7;4;
