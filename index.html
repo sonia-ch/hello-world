@@ -169,8 +169,8 @@ function ternaryPlot(selector, userOpt ) {
 			divgroupSvg.append("circle")
 			.attr("cx", 11*k+50)
 			.attr("cy", 20)
-			.attr("r", 5)
-			.style("fill","#DB7365");
+			.attr("r", 5);
+			//.style("fill","#DB7365");
 		}
 		
 		
@@ -373,6 +373,7 @@ function ternaryPlot(selector, userOpt ) {
 					.duration(500)		
 					.style("opacity", 0);
 			});
+			.on("click",function(d){console.log("on click!")});
 
 		circles.transition().filter(function(d,i){ 
 			console.log(i);
