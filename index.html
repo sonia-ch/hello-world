@@ -163,8 +163,9 @@ function ternaryPlot(selector, userOpt ) {
 		.style("left", (i%2)*200 + "px")
 		.style("top", Math.floor(i/2)*100 + "px");
 		divgroup.append("text").text("Group " + (i+1));
-		divgroupSvg = divgroup.append("svg");
-		
+		divgroupSvg = divgroup.append("svg")
+		.attr('id', function(d){ return "group" + (i+1); });
+
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
 			.attr("cx", 11*k+50)
@@ -325,7 +326,8 @@ function ternaryPlot(selector, userOpt ) {
 	var teammates = 0;
 	
 	function updateGroup(){
-		divgroupSvg.selectAll("circle")
+		d3.select("#group1").selectAll("circle")
+		//divgroupSvg.selectAll("circle")
 		.style("fill","#DB7365");
 	}
 	
