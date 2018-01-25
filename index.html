@@ -151,7 +151,7 @@ function ternaryPlot(selector, userOpt ) {
 		.style("opacity", 0);
 		
 	var div2 = d3.select('#groups')
-		.attr("class", "groups")				
+		.attr("class", "groups");				
 		//.attr("width", 300)
         //.attr("height", 600);
 		
@@ -162,14 +162,15 @@ function ternaryPlot(selector, userOpt ) {
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
 		.style("top", Math.floor(i/2)*100 + "px");
-		divgroup.append("text").text("Group " + (i+1))
+		divgroup.append("text").text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg");
 		
 		for (k = 0; k < 8; k++){
 			divgroupSvg.append("circle")
 			.attr("cx", 11*k+50)
 			.attr("cy", 20)
-			.attr("r", 5);
+			.attr("r", 5)
+			.style("fill",#DB7365);
 		}
 		
 		
