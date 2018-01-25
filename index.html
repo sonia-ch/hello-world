@@ -171,7 +171,9 @@ function ternaryPlot(selector, userOpt ) {
 			console.log("Selected group ");
 			groupid = this.id;
 			console.log(groupid);
-			updateGroup(d3.select(this),groupid,teammates);
+			var index = groupid.substring(5);
+			teammates[index]+=1;
+			updateGroup(d3.select(this),groupid,teammates[index]);
 		});
 
 		for (k = 0; k < 8; k++){
@@ -335,8 +337,6 @@ function ternaryPlot(selector, userOpt ) {
 	
 	
 	function updateGroup(group, groupid, mates){
-		var index = groupid.substring(5);
-		console.log(index);
 		for (t = 0; t < mates; t++){
 			console.log("Group id: " + groupid);
 			group.select("#circle" + (t+1) + groupid)
