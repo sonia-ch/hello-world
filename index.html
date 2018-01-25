@@ -131,7 +131,7 @@ function ternaryPlot(selector, userOpt ) {
 	var i,j,groupedpersons = [];
 	for (i=0;i<10;i++){
 		if(!groupedpersons[i]) groupedpersons[i]=[];
-			for(j=0;j<10;j++){
+			for(j=0;j<8;j++){
 				groupedpersons[i][j]=0;
 			}
 	}
@@ -392,6 +392,14 @@ function ternaryPlot(selector, userOpt ) {
 					console.log(index);
 					return plot.dataset[i][filterBy] == "1"}
 			})
+			.filter(function(d,i){
+			
+				if(groupedpersons.indexOf(plot.dataset[i]["Alias"])!=-1){
+					return false
+				}
+				return true
+				 
+			})
 				
 			.on("mouseover", function(d,i) {
 				console.log("mouse over");
@@ -425,6 +433,14 @@ function ternaryPlot(selector, userOpt ) {
 			}else{
 				return plot.dataset[i][filterBy] == "1"
 			}})
+			.filter(function(d,i){
+			
+				if(groupedpersons.indexOf(plot.dataset[i]["Alias"])!=-1){
+					return false
+				}
+				return true
+				 
+			})
 			.attr("cx", function (d,i) { console.log(i + "cx: " + d[0]); return d[0]; })
 			.attr("cy", function (d,i) { console.log(i + "cy: " + d[0]); return d[1]; })
 			.attr("r", 6);
@@ -489,6 +505,8 @@ function updateData(filterBy){
 		}, "Alias", filterBy);
 	});
 }
+
+
 showAll();
 
 d3.select('#nextbutton').on('click', function(e){
