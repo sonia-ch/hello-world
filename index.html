@@ -377,24 +377,24 @@ function ternaryPlot(selector, userOpt ) {
 			
 		circles.enter().append("circle")
 			.filter(function(d,i){ //
-				console.log("plot: "+ plot.dataset[i]["degree"]);
+				//console.log("plot: "+ plot.dataset[i]["degree"]);
 				if(filterBy == "all"){
 					index.push(i);
-					console.log(index);
+					//console.log(index);
 					return true
 				}else if(filterBy == "Bachelor in Science"){
 					if(plot.dataset[i]["degree"] == filterBy){
 						index.push(i);}
-					console.log(index);
+					//console.log(index);
 					return plot.dataset[i]["degree"] == filterBy
 				}else{
 					if(plot.dataset[i][filterBy] == "1"){
 						index.push(i);}
-					console.log(index);
+					//console.log(index);
 					return plot.dataset[i][filterBy] == "1"}
 			})
 			.filter(function(d,i){
-			
+				console.log(groupedpersons.indexOf(plot.dataset[i]["Alias"]))
 				if(groupedpersons.indexOf(plot.dataset[i]["Alias"])!=-1){
 					return false
 				}
