@@ -373,6 +373,7 @@ function ternaryPlot(selector, userOpt ) {
 			});
 
 		circles.transition().filter(function(d,i){ 
+			console.log(i);
 			if(filterBy == "all"){
 				return true
 			}else if(filterBy == "Bachelor in Science"){
