@@ -124,6 +124,8 @@ function ternaryPlot(selector, userOpt ) {
 	var plot = {
 		dataset:[]
 	};
+	
+	var teammates = 0;
 
 	var opt = {
 		width:900,
@@ -328,7 +330,7 @@ function ternaryPlot(selector, userOpt ) {
 	    return [p[0] * factor, p[1] * factor];
 	}
 
-	var teammates = 0;
+	
 	
 	function updateGroup(group, mates){
 		for (t = 0; t < mates; t++){
