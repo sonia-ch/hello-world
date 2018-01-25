@@ -169,7 +169,9 @@ function ternaryPlot(selector, userOpt ) {
 		.attr('id', function(d){ return "group" + (i+1); })
 		.on("click", function(d){ 
 			console.log("Selected group ");
-			updateGroup(d3.select(this),teammates);
+			groupid = this.id;
+			console.log(groupid);
+			updateGroup(d3.select(this),groupid,teammates);
 		});
 
 		for (k = 0; k < 8; k++){
@@ -332,10 +334,10 @@ function ternaryPlot(selector, userOpt ) {
 
 	
 	
-	function updateGroup(group, mates){
+	function updateGroup(group,groupid, mates){
 		for (t = 0; t < mates; t++){
-			console.log("Group id: " + group.id);
-			group.select("#circle" + (t+1) + group.id)
+			console.log("Group id: " + groupid);
+			group.select("#circle" + (t+1) + groupid)
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 		}
