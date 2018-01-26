@@ -56,6 +56,14 @@
 			stroke-width: 2px;
 		}
 		
+		text.tooltip {
+			font-family: sans-serif;
+			font-weight: lighter;
+			font-size: 1rem;
+			fill: #333;
+			stroke:none;
+		}
+		
 		div.tooltip {	
 			position: absolute;			
 			text-align: center;			
@@ -195,6 +203,7 @@ function ternaryPlot(selector, userOpt ) {
 		.style("top", Math.floor(i/2)*100 + "px");
 		divgroup.append("text")
 		.attr("id", "textGroup" + (i+1))
+		.attr("class","tooltip")
 		.text("Group " + (i+1)+":	[0, 0, 0]");
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
