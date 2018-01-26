@@ -60,7 +60,7 @@
 			position: absolute;			
 			text-align: center;			
 			width: 200px;					
-			height: 100px;					
+			height: fit-content;					
 			padding: 2px;				
 			font: 12px sans-serif;		
 			background: lightsteelblue;	
@@ -453,10 +453,8 @@ function ternaryPlot(selector, userOpt ) {
 			.on("click", function(d,i) {
 				console.log("on click!");
 				console.log("select a group now!");
-				//d3.select(this).remove();
 				waitingperson = plot.dataset[index[i]][bindBy];
 				circle2delete = d3.select(this);
-				//updateGroup(teammates);
 			});
 
 		circles.transition().filter(function(d,i){ 
