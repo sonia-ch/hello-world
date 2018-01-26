@@ -358,12 +358,14 @@ function ternaryPlot(selector, userOpt ) {
 		console.log(groupedpersons);
 		oneperson = groupedpersons[index-1][0];
 		console.log(oneperson);
+		for(t=0;t<mates;t++){		
+			console.log("Group id: " + groupid);
+			group.select("#circle" + (t+1) + groupid)
+			//d3.select("#group1").select("#circle" + (t+1) + "group1")
+			.style("fill","#DB7365");
+				}
 		d3.csv("datos2.csv", function(error, data) {
-			data.forEach(function(d){
-				console.log("Group id: " + groupid);
-				group.select("#circle" + (t+1) + groupid)
-				//d3.select("#group1").select("#circle" + (t+1) + "group1")
-				.style("fill","#DB7365");
+			data.forEach(function(d){				
 				if(d.Alias == waitingperson){
 					console.log(waitingperson)
 					console.log(d.statistics);
