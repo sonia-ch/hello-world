@@ -126,6 +126,9 @@ function ternaryPlot(selector, userOpt ) {
 	};
 	
 	var teammates = [0,0,0,0,0,0,0,0,0,0];
+	var stat = [0,0,0,0,0,0,0,0,0,0];
+	var progr = [0,0,0,0,0,0,0,0,0,0];
+	var artes = [0,0,0,0,0,0,0,0,0,0];
 	var circle2delete;
 
 	var waitingperson = "";
@@ -356,7 +359,20 @@ function ternaryPlot(selector, userOpt ) {
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 			
+			d3.csv("datos2.csv", function(error, data) {
+				data.forEach(function(d){
+					if(d.Alias == groupedpersons[index-1][t]){
+						stat[index-1] += d.statistics/mates;
+						progr[index-1]+=d.programming/mates;
+						artes[index-1]+=d.art/mates;
+					}
+				})
+			}
+			
 		}
+		console.log(stat)
+		console.log(progr)
+		console.log(artes)
 		circle2delete.remove();
 		//showAll();
 	}
@@ -395,13 +411,6 @@ function ternaryPlot(selector, userOpt ) {
 					//console.log(index);
 					return plot.dataset[i][filterBy] == "1"}
 			})
-			.filter(function(d,i){
-				if(groupedpersons.indexOf(waitingperson)!=-1){
-					return false
-				}
-				return true
-				 
-			})
 				
 			.on("mouseover", function(d,i) {
 				console.log("mouse over");
@@ -437,14 +446,6 @@ function ternaryPlot(selector, userOpt ) {
 			}else{
 				return plot.dataset[i][filterBy] == "1"
 			}})
-			.filter(function(d,i){
-			
-				if(groupedpersons.indexOf(waitingperson)!=-1){
-					return false
-				}
-				return true
-				 
-			})
 			.attr("cx", function (d,i) { return d[0]; })
 			.attr("cy", function (d,i) { return d[1]; })
 			.attr("r", 6);
