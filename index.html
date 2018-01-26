@@ -362,9 +362,10 @@ function ternaryPlot(selector, userOpt ) {
 			d3.csv("datos2.csv", function(error, data) {
 				data.forEach(function(d){
 					if(d.Alias == groupedpersons[index-1][t]){
+						console.log(d.statistics);
 						stat[index-1] += d.statistics/mates;
 						progr[index-1]+=d.programming/mates;
-						artes[index-1]+=d.art/mates;
+						artes[index-1]+=d.arts/mates;
 					}
 				})
 			});
