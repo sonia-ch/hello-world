@@ -356,10 +356,10 @@ function ternaryPlot(selector, userOpt ) {
 		artes[index-1]=0;
 		groupedpersons[index-1][mates-1] = waitingperson;
 		console.log(groupedpersons);
-		d3.csv("datos2.csv",function(error,data)){
+		d3.csv("datos2.csv",function(error,data){
 		oneperson = groupedpersons[index-1][0]
 		Console.log(data.statistics[data.Alias.indexOf(oneperson)]);
-		}
+		});
 		/*d3.csv("datos2.csv", function(error, data) {
 			data.forEach(function(d){
 			t=0;
