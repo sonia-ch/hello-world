@@ -351,6 +351,9 @@ function ternaryPlot(selector, userOpt ) {
 	
 	
 	function updateGroup(group, groupid, mates,index){
+		stats[index-1]=0;
+		progr[index-1]=0;
+		art[index-1]=0;
 		groupedpersons[index-1][mates-1] = waitingperson;
 		console.log(groupedpersons);
 		for (t = 0; t < mates; t++){			
@@ -359,24 +362,24 @@ function ternaryPlot(selector, userOpt ) {
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
 			.style("fill","#DB7365");
 			oneperson = groupedpersons[index-1][t];
-			console.log(t);
 			d3.csv("datos2.csv", function(error, data) {
 				data.forEach(function(d){
-					console.log(d.Alias);
-					console.log(oneperson);
 					if(d.Alias == oneperson){
 						console.log(d.statistics);
-						stat[index-1] += d.statistics/mates;
-						progr[index-1]+=d.programming/mates;
-						artes[index-1]+=d.arts/mates;
+						stat[index-1] += d.statistics;
+						progr[index-1]+=d.programming;
+						artes[index-1]+=d.art/mates;
+						console.log(stat)
+						console.log(progr)
+						console.log(artes)
 					}
 				})
 			});
 			
 		}
-		console.log(stat)
-		console.log(progr)
-		console.log(artes)
+		stat[index-1] /= mates;
+		progr[index-1]/= mates;
+		artes[index-1]/= mates;
 		circle2delete.remove();
 		//showAll();
 	}
