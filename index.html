@@ -511,6 +511,7 @@ function showAll(){
 			for(j=0;j<8;j++){
 				groupedpersons[i][j]=0;
 			}
+			d3.select("#textGroup" + (i)).text("Group " + (i)+":	[0, 0, 0]");
 	}
 	d3.selectAll("circle").style("fill","#fff1e0");
 	d3.csv("datos2.csv", function(error, data) {
