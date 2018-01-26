@@ -178,7 +178,9 @@ function ternaryPlot(selector, userOpt ) {
 		.attr("class","subgroups")
 		.style("left", (i%2)*200 + "px")
 		.style("top", Math.floor(i/2)*100 + "px");
-		divgroup.append("text").text("Group " + (i+1));
+		divgroup.append("text")
+		.attr("id", "textGroup" + (i+1))
+		.text("Group " + (i+1));
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
 		.on("click", function(d){ 
@@ -378,6 +380,8 @@ function ternaryPlot(selector, userOpt ) {
 					console.log(stat)
 					console.log(progr)
 					console.log(artes)
+					
+					d3.select("#textGroup" + (index)).text("Group " + (index) + ":	" + progr[index-1] + ", " + artes[index-1] + ", " + stat[index-1] );
 				}
 			});			
 		});
