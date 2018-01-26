@@ -126,6 +126,7 @@ function ternaryPlot(selector, userOpt ) {
 	};
 	
 	var teammates = [0,0,0,0,0,0,0,0,0,0];
+	var circle2delete;
 
 	var waitingperson = "";
 	var i,j,groupedpersons = [];
@@ -356,7 +357,8 @@ function ternaryPlot(selector, userOpt ) {
 			.style("fill","#DB7365");
 			
 		}
-		showAll();
+		circle2delete.remove();
+		//showAll();
 	}
 	
 	plot.data = function(data, accessor, bindBy, filterBy){ //bind by is the dataset property used as an id for the join
@@ -420,8 +422,9 @@ function ternaryPlot(selector, userOpt ) {
 			.on("click", function(d,i) {
 				console.log("on click!");
 				console.log("select a group now!");
-				d3.select(this).remove();
+				//d3.select(this).remove();
 				waitingperson = plot.dataset[index[i]][bindBy];
+				circle2delete = d3.select(this);
 				//updateGroup(teammates);
 			});
 
