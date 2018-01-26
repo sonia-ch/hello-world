@@ -372,15 +372,16 @@ function ternaryPlot(selector, userOpt ) {
 					stat[index-1] += +d.statistics;
 					progr[index-1]+= +d.programming;
 					artes[index-1]+= +d.art;
+					stat[index-1] /= mates;
+					progr[index-1]/= mates;
+					artes[index-1]/= mates;
 					console.log(stat)
 					console.log(progr)
 					console.log(artes)
 				}
 			});			
 		});
-		stat[index-1] /= mates;
-		progr[index-1]/= mates;
-		artes[index-1]/= mates;
+		
 		circle2delete.remove();
 		//showAll();
 	}
