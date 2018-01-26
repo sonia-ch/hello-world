@@ -394,7 +394,9 @@ function ternaryPlot(selector, userOpt ) {
 					return plot.dataset[i][filterBy] == "1"}
 			})
 			.filter(function(d,i){
-				console.log(groupedpersons.indexOf(waitingperson))
+			for(k=0;k<10;k++){
+				console.log(groupedpersons[k].indexOf(waitingperson))
+			}				
 				if(groupedpersons.indexOf(waitingperson)!=-1){
 					return false
 				}
