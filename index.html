@@ -356,7 +356,9 @@ function ternaryPlot(selector, userOpt ) {
 		artes[index-1]=0;
 		groupedpersons[index-1][mates-1] = waitingperson;
 		console.log(groupedpersons);
-		for (var t = 0; t < mates; t++){			
+		t=0;
+		while (t < mates){
+		console.log(t);
 			console.log("Group id: " + groupid);
 			group.select("#circle" + (t+1) + groupid)
 			//d3.select("#group1").select("#circle" + (t+1) + "group1")
@@ -375,7 +377,7 @@ function ternaryPlot(selector, userOpt ) {
 					}
 				})
 			});
-			
+			t+=1;
 		}
 		stat[index-1] /= mates;
 		progr[index-1]/= mates;
