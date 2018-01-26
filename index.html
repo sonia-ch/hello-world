@@ -366,9 +366,9 @@ function ternaryPlot(selector, userOpt ) {
 				data.forEach(function(d){
 					if(d.Alias == oneperson){
 						console.log(d.statistics);
-						stat[index-1] += d.statistics;
-						progr[index-1]+=d.programming;
-						artes[index-1]+=d.art/mates;
+						stat[index-1] += +d.statistics;
+						progr[index-1]+= +d.programming;
+						artes[index-1]+= +d.art;
 						console.log(stat)
 						console.log(progr)
 						console.log(artes)
