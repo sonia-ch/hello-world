@@ -368,6 +368,7 @@ function ternaryPlot(selector, userOpt ) {
 			d3.csv("datos2.csv", function(error, data) {
 				data.forEach(function(d){
 					if(d.Alias == oneperson){
+						console.log(oneperson)
 						console.log(d.statistics);
 						stat[index-1] += +d.statistics;
 						progr[index-1]+= +d.programming;
