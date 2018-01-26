@@ -495,7 +495,7 @@ function ternaryPlot(selector, userOpt ) {
 			.on("click", function(d,i) {
 				console.log("on click!");
 				console.log("select a group now!");
-				d3.select(#popupmsg).style("visibility", "visible");
+				d3.select("#popupmsg").style("visibility", "visible");
 				waitingperson = plot.dataset[index[i]][bindBy];
 				circle2delete = d3.select(this);
 			});
