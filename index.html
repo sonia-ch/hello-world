@@ -109,6 +109,17 @@
 			margin: 0;
 			padding: 1em;
 		}
+		
+		div.legend2 {
+			position: absolute;	
+			top: 500px;
+			left:200px;
+			max-width: 550px;
+			width: 400px;
+			height: 20px;
+			margin: 0;
+			padding: 1em;
+		}
 	</style>
 
 </head>
@@ -127,6 +138,10 @@
 
 <div class="legend">
 Average score in: [Programming, Creativity, Statistics]
+</div>
+
+<div class="legend2">
+Click on a student to introduce it to a group.
 </div>
 
 <div id="groups">
@@ -168,7 +183,7 @@ function ternaryPlot(selector, userOpt ) {
 		width:900,
 		height:900,
 		side: 700,
-		margin: {top:70,left:50,bottom:50,right:50},
+		margin: {top:50,left:50,bottom:50,right:50},
 		axis_labels:['A','B','C'],
 		axis_ticks:[0,2,4,6,8,10],
 		tickLabelMargin:10,
