@@ -355,8 +355,12 @@ function ternaryPlot(selector, userOpt ) {
 		progr[index-1]=0;
 		artes[index-1]=0;
 		groupedpersons[index-1][mates-1] = waitingperson;
-		console.log(groupedpersons);		
-		d3.csv("datos2.csv", function(error, data) {
+		console.log(groupedpersons);
+		d3.csv("datos2.csv",function(error,data)){
+		oneperson = groupedpersons[index-1][0]
+		Console.log(data.statistics[data.Alias.indexOf(oneperson)]);
+		}
+		/*d3.csv("datos2.csv", function(error, data) {
 			data.forEach(function(d){
 			t=0;
 			while (t < mates){
@@ -378,7 +382,7 @@ function ternaryPlot(selector, userOpt ) {
 			}			
 			t+=1;
 			});
-		});
+		});*/
 		stat[index-1] /= mates;
 		progr[index-1]/= mates;
 		artes[index-1]/= mates;
