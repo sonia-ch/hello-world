@@ -358,7 +358,7 @@ function ternaryPlot(selector, userOpt ) {
 		console.log(groupedpersons);
 		d3.csv("datos2.csv",function(error,data){
 		oneperson = groupedpersons[index-1][0]
-		Console.log(data.statistics[data.Alias.indexOf(oneperson)]);
+		console.log(data.statistics[data.Alias.indexOf(oneperson)]);
 		});
 		/*d3.csv("datos2.csv", function(error, data) {
 			data.forEach(function(d){
