@@ -381,7 +381,7 @@ function ternaryPlot(selector, userOpt ) {
 					console.log(progr)
 					console.log(artes)
 					
-					d3.select("#textGroup" + (index)).text("Group " + (index) + ":	" + progr[index-1] + ", " + artes[index-1] + ", " + stat[index-1] );
+					d3.select("#textGroup" + (index)).text("Group " + (index) + ":	" + Math.round(progr[index-1],1) + ", " + Math.round(artes[index-1],1) + ", " + Math.round(stat[index-1],1) ;
 				}
 			});			
 		});
