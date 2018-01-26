@@ -355,32 +355,30 @@ function ternaryPlot(selector, userOpt ) {
 		progr[index-1]=0;
 		artes[index-1]=0;
 		groupedpersons[index-1][mates-1] = waitingperson;
-		console.log(groupedpersons);
-		t=0;
-		while (t < mates){
-			console.log(t);
-			console.log("Group id: " + groupid);
-			group.select("#circle" + (t+1) + groupid)
-			//d3.select("#group1").select("#circle" + (t+1) + "group1")
-			.style("fill","#DB7365");
-			oneperson = groupedpersons[index-1][t];
-			console.log(oneperson);
-			d3.csv("datos2.csv", function(error, data) {
-				data.forEach(function(d){
-					if(d.Alias == oneperson){
-						console.log(oneperson)
-						console.log(d.statistics);
-						stat[index-1] += +d.statistics;
-						progr[index-1]+= +d.programming;
-						artes[index-1]+= +d.art;
-						console.log(stat)
-						console.log(progr)
-						console.log(artes)
-					}
-				})
-			});
+		console.log(groupedpersons);		
+		d3.csv("datos2.csv", function(error, data) {
+			data.forEach(function(d){
+			t=0;
+			while (t < mates){
+				console.log("Group id: " + groupid);
+				group.select("#circle" + (t+1) + groupid)
+				//d3.select("#group1").select("#circle" + (t+1) + "group1")
+				.style("fill","#DB7365");
+				oneperson = groupedpersons[index-1][t];
+				if(d.Alias == oneperson){
+					console.log(oneperson)
+					console.log(d.statistics);
+					stat[index-1] += +d.statistics;
+					progr[index-1]+= +d.programming;
+					artes[index-1]+= +d.art;
+					console.log(stat)
+					console.log(progr)
+					console.log(artes)
+				}
+			}			
 			t+=1;
-		}
+			});
+		});
 		stat[index-1] /= mates;
 		progr[index-1]/= mates;
 		artes[index-1]/= mates;
