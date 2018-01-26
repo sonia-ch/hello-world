@@ -104,7 +104,7 @@
 	</style>
 
 </head>
-<!--<a id="nextbutton" href="#">Data change</a>-->
+<a id="nextbutton" href="#">Reset</a>
 <a id="degreebutton" href="#">Only Bachelor students</a>
 <a id="sportsbutton" href="#">Interested in sports</a>
 <a id="artbutton" href="#">Interested in arts</a>
@@ -498,17 +498,20 @@ var plot_opts = {
 
 var tp = ternaryPlot( '#plot', plot_opts );
 
-function showAll(){
-	/*var d = []
-	for(var i = 0; i < 10; i++){
-		d.push({
-			journalist:i,//Math.random(),
-			developer:i,//Math.random(),
-			designer:i,//Math.random(),
-			label:'point'+i
-		})
+function showAll(){	
+	teammates = [0,0,0,0,0,0,0,0,0,0];
+	stat = [0,0,0,0,0,0,0,0,0,0];
+	progr = [0,0,0,0,0,0,0,0,0,0];
+	artes = [0,0,0,0,0,0,0,0,0,0];
+	oneperson = "";
+	waitingperson = "";	
+	for (i=0;i<10;i++){
+		if(!groupedpersons[i]) groupedpersons[i]=[];
+			for(j=0;j<8;j++){
+				groupedpersons[i][j]=0;
+			}
 	}
-	tp.data(d, function(d){ console.log([d.journalist, d.developer, d.designer]); return [d.journalist, d.developer, d.designer]}, 'label');*/
+	d3.selectAll("circle").style("fill","#fff1e0");
 	d3.csv("datos2.csv", function(error, data) {
 		data.forEach(function(d) {
 			d.Alias = d.Alias;
@@ -536,8 +539,8 @@ function updateData(filterBy){
 
 showAll();
 
-//d3.select('#nextbutton').on('click', function(e){
-	//showAll(); d3.event.preventDefault(); });
+d3.select('#nextbutton').on('click', function(e){
+	showAll(); d3.event.preventDefault(); });
 
 d3.select('#degreebutton').on('click', function(e){
 	updateData("Bachelor in Science"); d3.event.preventDefault(); });
