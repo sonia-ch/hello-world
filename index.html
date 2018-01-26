@@ -240,7 +240,7 @@ function ternaryPlot(selector, userOpt ) {
 		.attr('id', function(d){ return "group" + (i+1); })
 		.on("click", function(d){ 
 			console.log("Selected group ");
-			d3.select(#popupmsg).style("visibility", "hidden");
+			d3.select("#popupmsg").style("visibility", "hidden");
 			groupid = this.id;
 			console.log(groupid);
 			var index = groupid.substring(5);
