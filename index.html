@@ -428,7 +428,7 @@ function ternaryPlot(selector, userOpt ) {
 			});
 
 		circles.transition().filter(function(d,i){ 
-			console.log(i);
+			//console.log(i);
 			if(filterBy == "all"){
 				return true
 			}else if(filterBy == "Bachelor in Science"){
@@ -438,14 +438,14 @@ function ternaryPlot(selector, userOpt ) {
 			}})
 			.filter(function(d,i){
 			
-				if(groupedpersons.indexOf(plot.dataset[i]["Alias"])!=-1){
+				if(groupedpersons.indexOf(waitingperson)!=-1){
 					return false
 				}
 				return true
 				 
 			})
-			.attr("cx", function (d,i) { console.log(i + "cx: " + d[0]); return d[0]; })
-			.attr("cy", function (d,i) { console.log(i + "cy: " + d[0]); return d[1]; })
+			.attr("cx", function (d,i) { return d[0]; })
+			.attr("cy", function (d,i) { return d[1]; })
 			.attr("r", 6);
 			
 		svg.on("click", function() {
