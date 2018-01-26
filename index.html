@@ -93,7 +93,7 @@
 		
 		div.legend {
 			position: absolute;	
-			top: 20px;
+			top: 25px;
 			left:800px;
 			max-width: 550px;
 			width: 400px;
@@ -104,7 +104,7 @@
 	</style>
 
 </head>
-<a id="nextbutton" href="#">Data change</a>
+<!--<a id="nextbutton" href="#">Data change</a>-->
 <a id="degreebutton" href="#">Only Bachelor students</a>
 <a id="sportsbutton" href="#">Interested in sports</a>
 <a id="artbutton" href="#">Interested in arts</a>
@@ -195,7 +195,7 @@ function ternaryPlot(selector, userOpt ) {
 		.style("top", Math.floor(i/2)*100 + "px");
 		divgroup.append("text")
 		.attr("id", "textGroup" + (i+1))
-		.text("Group " + (i+1));
+		.text("Group " + (i+1)+":	[0, 0, 0]");
 		divgroupSvg = divgroup.append("svg")
 		.attr('id', function(d){ return "group" + (i+1); })
 		.on("click", function(d){ 
@@ -384,18 +384,12 @@ function ternaryPlot(selector, userOpt ) {
 		d3.csv("datos2.csv", function(error, data) {
 			data.forEach(function(d){				
 				if(d.Alias == waitingperson){
-					console.log(waitingperson)
-					console.log(d.statistics);
 					stat[index-1] += +d.statistics;
 					progr[index-1]+= +d.programming;
 					artes[index-1]+= +d.art;
 					stat[index-1] /= mates;
 					progr[index-1]/= mates;
-					artes[index-1]/= mates;
-					console.log(stat)
-					console.log(progr)
-					console.log(artes)
-					
+					artes[index-1]/= mates;				
 					d3.select("#textGroup" + (index)).text("Group " + (index) + ":	[" + Math.round(progr[index-1],1) + ", " + Math.round(artes[index-1],1) + ", " + Math.round(stat[index-1],1) + "]") ;
 				}
 			});			
@@ -542,8 +536,8 @@ function updateData(filterBy){
 
 showAll();
 
-d3.select('#nextbutton').on('click', function(e){
-	showAll(); d3.event.preventDefault(); });
+//d3.select('#nextbutton').on('click', function(e){
+	//showAll(); d3.event.preventDefault(); });
 
 d3.select('#degreebutton').on('click', function(e){
 	updateData("Bachelor in Science"); d3.event.preventDefault(); });
